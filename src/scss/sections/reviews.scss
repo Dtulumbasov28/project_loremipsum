@@ -1,0 +1,167 @@
+.reviews {
+  padding: 80px 0;
+
+  @media (max-width: $mobile) {
+    padding: 50px 0;
+  }
+  // .reviews__container
+
+  &__container {
+  }
+
+  // .reviews__title
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 22px;
+    }
+
+    & span {
+      color: $colorSecond;
+    }
+  }
+
+  // .reviews__body
+
+  &__body {
+    position: relative;
+  }
+  // .reviews__content
+
+  &__content {
+  }
+
+  // .reviews__body-wrapper
+
+  &__body-wrapper {
+  }
+
+  // .reviews__slide
+
+  &__slide {
+  }
+
+  // .reviews__pagination
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    & .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #3d4050;
+      opacity: 0.8;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.reviews-slide {
+  background-color: #dfdfe1;
+  border-radius: $borderRadius;
+  padding: 30px 20px;
+
+  @media (max-width: $mobileSmall) {
+    padding: 20px 10px;
+  }
+  // .reviews-slide__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+  }
+
+  // .reviews-slide__img
+
+  &__img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    flex-shrink: 0;
+
+    @media (max-width: $mobileSmall) {
+      width: 80px;
+      height: 80px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .reviews-slide__text
+
+  &__text {
+  }
+
+  // .reviews-slide__name
+
+  &__name {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.25;
+
+    margin-bottom: 10px;
+  }
+
+  // .reviews-slide__old
+
+  &__old {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  // .reviews-slide__bottom
+
+  &__bottom {
+  }
+
+  // .reviews-slide__desc
+
+  &__desc {
+    line-height: 1.75;
+    padding: 20px 10px;
+    &::before {
+      content: "";
+      display: block;
+      width: 60%;
+      height: 1px;
+      background-color: #3d4050;
+      margin: 0 auto 20px auto;
+    }
+  }
+}
+.swiper-slide {
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}

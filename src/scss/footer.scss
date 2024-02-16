@@ -1,0 +1,153 @@
+//====================================================================================================
+.footer {
+  font-size: 13px;
+  color: $colorMain;
+
+  background-color: #3d4050;
+
+  // .footer__container
+
+  &__container {
+  }
+
+  // .footer__body
+
+  &__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+
+    @media (max-width: $tablet) {
+      padding: 20px 0;
+      height: unset;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  // .footer__info
+
+  &__info {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    @media (max-width: $tablet) {
+      order: 1;
+    }
+  }
+
+  // .footer__payment
+
+  &__payment {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: $tablet) {
+      justify-content: center;
+      order: 0;
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: 12px;
+    }
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 18px;
+      background-color: #c3c3c3;
+      margin: 0 auto;
+
+      @media (max-width: $tablet) {
+        content: unset;
+      }
+    }
+    &::after {
+      content: "";
+      width: 1px;
+      height: 18px;
+      background-color: #c3c3c3;
+      margin: 0 auto;
+
+      @media (max-width: $tablet) {
+        content: unset;
+      }
+    }
+  }
+
+  // .footer__payment-item
+
+  &__payment-item {
+    color: #c3c3c3;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    @media (max-width: $pc) {
+      gap: 5px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      gap: 2px;
+    }
+
+    &:nth-child(2) {
+      margin: 0 38px;
+
+      @media (max-width: $pc) {
+        margin: 0 20px;
+      }
+    }
+
+    & svg {
+      width: 20px;
+      height: 20px;
+
+      @media (max-width: $mobileSmall) {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  // .footer__socials
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
+    @media (max-width: $pc) {
+      gap: 20px;
+    }
+
+    @media (max-width: $tablet) {
+      order: -1;
+    }
+  }
+
+  // .footer__socials-item
+
+  &__socials-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+
+    @media (max-width: $pc) {
+      gap: 5px;
+    }
+
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+//====================================================================================================

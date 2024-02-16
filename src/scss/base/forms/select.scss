@@ -1,0 +1,189 @@
+// <SELECT>
+// Снипет (HTML): sel
+.select {
+  position: relative;
+  width: calc(33% - 17px);
+  height: 48px;
+
+  @media (max-width: $tablet) {
+    width: calc(50% - 15px);
+  }
+
+  @media (max-width: $mobileSmall) {
+	width: 100%;
+  }
+
+  // .select__body
+  &__body {
+    position: relative;
+    color: #272733;
+    font-size: 18px;
+
+    width: 100%;
+    height: 48px;
+    border-radius: $borderRadius;
+    background-color: rgb(255 255 255 / 85%);
+    outline: 1px solid $colorMain;
+
+    @media (max-width: $mobile) {
+      font-size: 15px;
+    }
+  }
+  // .select__title
+  &__title {
+    font-size: 18px;
+    color: #272733;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    background: transparent;
+    padding: 12px 16px 12px 10px;
+
+    @media (max-width: $mobile) {
+      font-size: 15px;
+    }
+  }
+  // .select__value
+  &__value {
+    //  display: flex;
+    //  align-items: center;
+    //  padding: 0 rem(15);
+    //  gap: rem(10);
+    //  > * {
+    //    flex: 1 1 auto;
+    //  }
+    &:after {
+      content: "";
+      align-self: stretch;
+      flex: 0 0 10px;
+      transition: all 0.3s;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      ._select-open & {
+        transform: rotate(-180deg);
+      }
+    }
+    &._select-pseudo-label {
+      &::before {
+        content: attr(data-pseudo-label);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // .select__content
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+      content: "";
+      background: url("@img/icons/select.svg") center center no-repeat;
+      background-size: 100%;
+      width: 9px;
+      height: 6px;
+      margin-top: 2px;
+      transition: all 0.2s;
+    }
+  }
+  // .select__text
+  &__text {
+    flex: 1 1 auto;
+  }
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    height: 100%;
+  }
+  // .select__options
+  &__options {
+    color: $colorMain;
+
+    position: absolute;
+    top: calc(48px - 2px);
+    left: 0;
+    max-height: 180px;
+    min-width: 100%;
+    overflow: auto;
+    border-radius: 0 0 3px 3px;
+    outline: 1px solid #3d4050;
+    background-color: #272733 !important;
+    padding: 10px 0px 5px 0px;
+  }
+  // .select__scroll
+  &__scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    // Максимальная высота
+    max-height: 200px;
+    // Стили скроллбара
+    .simplebar-scrollbar {
+      &::before {
+        //opacity: 1;
+      }
+    }
+  }
+  // .select__option
+  &__option {
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: inherit;
+    &._select-selected {
+      background-color: #eee;
+    }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $colorSecond;
+      }
+    }
+  }
+
+  // Конструкция дополнительных данных
+  &__row {
+    display: inline-flex;
+    align-items: center;
+  }
+  &__asset {
+  }
+  &__text {
+  }
+
+  // Состояния селекта
+  &._select-open {
+    z-index: 5;
+
+    & .select__body {
+      background-color: #3d4050;
+      outline: 1px solid #3d4050;
+    }
+    .select__options {
+    }
+    & .select__title {
+      color: $colorMain;
+      background-color: #3d4050;
+    }
+    & .select__content::after {
+      filter: invert(1);
+      transform: scale(1, -1);
+    }
+  }
+  &._select-disabled {
+  }
+  &._select-active {
+  }
+  &._select-focus {
+  }
+  &._select-multiple {
+  }
+  &._select-checkbox {
+  }
+}
+
+// Тег
+._select-tag {
+  cursor: pointer;
+}

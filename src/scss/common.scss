@@ -1,0 +1,62 @@
+// Заголовки, общие БЄМ блоки и проче...
+a,
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.button {
+  font-size: 13px;
+  line-height: inherit;
+  text-transform: uppercase;
+  text-align: center;
+
+  width: 180px;
+  padding: 15px 31px;
+  border-radius: $borderRadius;
+
+  // .button_color_blue
+
+  &_color_blue {
+    background-color: $colorSecond;
+    color: $colorMain;
+    outline: 1px solid $colorMain;
+  }
+
+  // .button_color_white
+
+  &_color_white {
+    background-color: $colorMain;
+    color: #2a2b30;
+    outline: 1px solid #6f6d7b;
+  }
+}
+
+@media (hover: hover) and (min-width: $tablet) {
+  a,
+  button,
+  input {
+    transition: all 0.2s;
+  }
+  .button_color_blue:hover {
+    background-color: #3e8adc;
+  }
+  .button_color_white:hover {
+    color: $colorMain;
+    background-color: #3e8adc;
+	 outline: 1px solid $colorMain;
+  }
+  .header__menu-link:hover,
+  .footer__socials-item:hover {
+    color: $colorSecond;
+  }
+  .order-form__elem:hover {
+    background-color: $colorMain;
+  }
+  .order-form__submit:hover {
+    background-color: #3e8adc;
+  }
+  .order-form__file:hover .order-form__file-label {
+    background-color: rgb(223 223 225);
+  }
+}
