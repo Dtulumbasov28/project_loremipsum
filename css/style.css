@@ -1331,6 +1331,7 @@ input[type=submit] {
     width: 120px;
     height: 120px;
     padding: 20px;
+    overflow: hidden;
   }
 
   .order__item-desc {
