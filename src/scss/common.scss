@@ -44,7 +44,7 @@ input[type="submit"] {
   .button_color_white:hover {
     color: $colorMain;
     background-color: #3e8adc;
-	 outline: 1px solid $colorMain;
+    outline: 1px solid $colorMain;
   }
   .header__menu-link:hover,
   .footer__socials-item:hover {
@@ -58,5 +58,88 @@ input[type="submit"] {
   }
   .order-form__file:hover .order-form__file-label {
     background-color: rgb(223 223 225);
+  }
+}
+
+@keyframes appearanceX {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes appearanceY {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.main__title,
+.main__text-slogan,
+.order__title,
+.order__subtitle,
+.reviews__title {
+  transform: translateX(-100%);
+  opacity: 0;
+
+  &._watcher-view {
+    animation: appearanceX 0.4s 0.3s forwards;
+  }
+}
+
+.main__text-item {
+  transform: translateX(-100%);
+  opacity: 0;
+
+  &:nth-child(1) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.3s forwards;
+    }
+  }
+
+  &:nth-child(2) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.4s forwards;
+    }
+  }
+
+  &:nth-child(3) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.5s forwards;
+    }
+  }
+
+  &:nth-child(4) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.4s forwards;
+    }
+  }
+}
+
+.main__button {
+  transform: translateX(-100%);
+  opacity: 0;
+
+  &:nth-child(1) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.7s forwards;
+    }
+  }
+
+  &:nth-child(2) {
+    &._watcher-view {
+      animation: appearanceX 0.4s 0.8s forwards;
+    }
+  }
+}
+
+.order__list,
+.order__form,
+.reviews__body {
+  transform: translateY(80%);
+  opacity: 0;
+
+  &._watcher-view {
+    animation: appearanceY 0.4s 0.2s forwards;
   }
 }
